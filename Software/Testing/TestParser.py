@@ -1,8 +1,10 @@
+#Python script to convert readings from test into csv file
+
 import csv
 def main():
     #open Feather m0 readings
     #NAME YOUR FILE HERE
-    testResults = open("ParkPower13.txt", "r")
+    testResults = open("FILENAME.txt", "r")
 
     #Print just the transmission data
     #for testLine in testResults:
@@ -13,7 +15,7 @@ def main():
 
     #Create a clean csv
     #NAME YOUR NEW FILE HERE
-    with open('ParkPower13.csv', 'w') as csvFile:
+    with open('NEWFILE.csv', 'w') as csvFile:
         filewriter = csv.writer(csvFile,delimiter=',',quoting=csv.QUOTE_ALL)
         filewriter.writerow(["Transmission #", "RSSI", "Transmit Time"])
         row = ["none", "none", "none"]
@@ -38,12 +40,6 @@ def main():
 main()
 
 #TESTS
-
-#Test to print first 20 lines
-#i = 0
-#while i < 2:
-#    print(testResults.readline(i))
-#    i += 1
 
 #Test to print splitLine
 #testLine = testResults.readlines()[49]
